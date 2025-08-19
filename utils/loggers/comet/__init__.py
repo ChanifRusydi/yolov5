@@ -202,6 +202,9 @@ class CometLogger:
 
     def log_metrics(self, log_dict, **kwargs):
         """Logs metrics to the current experiment, accepting a dictionary of metric names and values."""
+        print(f"[DEBUG] Logged the following {log_dict}")
+        if kwargs:
+            print(f"[DEBUG] The following in the kwargs {kwargs}")
         self.experiment.log_metrics(log_dict, **kwargs)
 
     def log_parameters(self, log_dict, **kwargs):
@@ -533,6 +536,7 @@ class CometLogger:
 
     def on_fit_epoch_end(self, result, epoch):
         """Logs metrics at the end of each training epoch."""
+        print(f"[DEBUG] on_fit_epoch_end called for epoch {epoch+1}")
         self.log_metrics(result, epoch=epoch)
 
     def on_model_save(self, last, epoch, final_epoch, best_fitness, fi):

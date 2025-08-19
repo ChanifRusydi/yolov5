@@ -1,0 +1,36 @@
+path: datasets/coco_traffic # dataset root dir
+train: train.txt
+val: val.txt
+
+# number of classes
+nc: 12
+
+# class names
+#names:
+#  [
+#    "person",
+#    "bicycle",
+#    "car",
+#    "motorcycle",
+#    "bus",
+#    "train",
+#    "truck",
+#    "traffic light",
+#    "fire hydrant",
+#    "stop sign",
+#    "cat",
+#    "dog",
+#  ]
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: bus
+  5: train
+  6: truck
+  7: traffic light
+  8: fire hydrant
+  9: stop sign
+  10: cat
+  11: dog
